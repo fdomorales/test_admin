@@ -1,24 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
+import Tabs from './Components/Tabs';
+import Header from './Components/Header';
+import DateElection from './Components/DateElection'
+import DateElection2 from './Components/DateElection2'
+import TimeElection from './Components/TimeElection'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    	<Header/>
+      	<Tabs />
+      	<DateElection />
+      	<DateElection2  />
+      	<TimeElection />
+      	<div className="row mt-2 mr-0 ml-0">
+            <div className="col-3 col-sm-3">
+                <b>Inicio:</b>
+            </div>
+            <div className="col-9 col-sm-9">22/08/2019 09:00:00</div>            
+    	</div>
+        <div className="row mt-2 mr-0 ml-0">
+            <div className="col-3 col-sm-3">
+                <b>Fin:</b>
+            </div>
+            <div className="col-9 col-sm-9">12/12/2019 09:00:00</div>            
+        </div>
+      	<div className="row mr-0 ml-0">
+        	<div className="col">
+        		<a className="btn btn-secondary mt-2 col-12 col-sm-3 mr-2" href="">Exportar configuración</a>
+				
+        		<a className="btn btn-outline-secondary mt-2 col-12 col-sm-3 mr-2" href="">Marcar en Producción</a>
+        		<a className="btn btn-danger mt-2 col-12 col-sm-3" href="">Reset</a>
+        	</div>
+      	</div>
     </div>
   );
 }
