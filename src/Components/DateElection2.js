@@ -18,7 +18,7 @@ export default function MaterialUIPickers() {
         <KeyboardDatePicker
           margin="normal"
           id="date-picker-dialog"
-          label="Fecha Fin"
+          label="Fecha Inicio"
           format="MM/dd/yyyy"
           value={selectedDate}
           onChange={handleDateChange}

@@ -1,37 +1,34 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 
-const useStyles = makeStyles(theme => ({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    width: 300,
-  },
-}));
 
-export default function DatePickers() {
-  const classes = useStyles();
 
-  return (
+class DatePickers extends React.Component {
+  //const classes = useStyles();
+    render(){
+        const cont = {
+              display: 'flex',
+              flexWrap: 'wrap',
+            };
+        return (
     
 
       
-    <form className={classes.container} noValidate>
-      <TextField
-        id="date"
-        label="Fecha Inicio"
-        type="date"
-        defaultValue="2017-05-24"
-        className={classes.textField}
-        InputLabelProps={{
-          shrink: true,
-        }}
-      />
-    </form>
-  );
+            <form  noValidate>
+              <TextField
+                id="date"
+                label={this.props.label}
+                type="date"
+                defaultValue="2017-05-24"
+                className={cont}
+                InputLabelProps={{
+                  shrink: true,
+                }}
+              />
+            </form>
+          );
+    }
+
 }
+
+export default DatePickers;
